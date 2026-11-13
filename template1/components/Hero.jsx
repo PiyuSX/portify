@@ -7,14 +7,14 @@ import { HyperText } from "./ui/hyper-text";
 
 const Hero = () => {
   return (
-    <div className="border-gray-600">
+    <div>
       <div className="flex items-center gap-4">
         <Image
           className="border rounded-full grayscale"
           alt="Profile Pic"
           src="/profile.jpg"
-          width={80}
-          height={80}
+          width={90}
+          height={90}
         />
 
         <div className="text-[0.7rem] *:text-muted-foreground">
@@ -47,6 +47,8 @@ const Hero = () => {
       <div>
 
       </div>
+
+      <div className="border-b my-6"></div>
 
     </div>
   );

@@ -1,15 +1,16 @@
 import Hero from "@/components/Hero";
 import DockNav from "@/components/DockNav";
-import { FlickeringGrid } from "@/components/ui/flickering-grid";
-
+import Top from "@/components/Top";
+import About from "@/components/About";
 
 export default function Home() {
   return (
     <div className="bg-background flex w-full justify-center">
-    <main className="w-[45%] border-b mt-20">
-      <FlickeringGrid />
+    <main className="w-[40%] mt-25">
+      <Top />
       <DockNav />
       <Hero />
+      <About />
     </main>
     </div>
   )
