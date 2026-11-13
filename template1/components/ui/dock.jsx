@@ -52,7 +52,6 @@ const Dock = React.forwardRef((
       onMouseLeave={() => mouseY.set(Infinity)}
       {...props}
       className={cn(dockVariants({ className }), {
-        // in a column, these align icons horizontally (left / center / right)
         "items-start": direction === "top",
         "items-center": direction === "middle",
         "items-end": direction === "bottom",
@@ -110,4 +109,17 @@ const DockIcon = ({
 
 DockIcon.displayName = "DockIcon"
 
-export { Dock, DockIcon, dockVariants }
+const DockSeparator = ({ className, ...props }) => {
+  return (
+    <div
+      role="separator"
+      aria-orientation="horizontal"
+      className={cn("h-px w-6 shrink-0 self-center rounded-full bg-border", className)}
+      {...props}
+    />
+  );
+}
+
+DockSeparator.displayName = "DockSeparator"
+
+export { Dock, DockIcon, DockSeparator, dockVariants }

@@ -1,12 +1,16 @@
+import { title } from "motion/react-client"
+
 const Data ={
   personal:{
     name: "Piyush Raj",
     username: "PiyusX",
-    role: "Computer Science Student",
-    location: "Nepal",
-    bio: "I am a lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    email: "piyush.raj@example.com",
+    dob: "2008-04-18",
+    role: "Future Engineer",
+    location: "Biratnagar, Nepal",
+    bio: "I'm Passionate about engineering, with a strong interest in mathematics and web development, while exploring electronics, PCB design, and hardware.",
+    emails: ["piyushraj9825@gmail.com", "hi@piyushrajbanshi.com.np"],
     profileImage: "/profile.png",
+    animatedText: "Code. Circuits. Systems."
     },
   social: {
     github: "https://github.com/PiyusX",
@@ -36,7 +40,11 @@ const Data ={
         github: "github.com",
         technologies: ["React", "Node.js", "Express.js", "MongoDB"],
     },
-  ]
+  ],
+  metaData: {
+    title: "PiyusX - Portfolio",
+    description: "PiyusX's Portfolio",
+  }
 }
 
 

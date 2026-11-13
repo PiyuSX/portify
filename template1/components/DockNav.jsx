@@ -3,8 +3,9 @@
 import Link from "next/link";
 import { Home, Mail } from "lucide-react"
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa"
-import { Dock, DockIcon } from "@/components/ui/dock"
+import { Dock, DockIcon, DockSeparator } from "@/components/ui/dock"
 import Data from "@/data/data.js"
+import { AnimatedThemeToggler  } from "./ui/animated-theme-toggler";
 
 const items = [
     {href: "/", icon: Home, label: "Home"},
@@ -30,6 +31,10 @@ export default function DockNav() {
                         </Link>
                     </DockIcon>
                 ))}
+                <DockSeparator />
+                <div className="flex size-full items-center justify-center rounded-full p-2 transition-colors hover:bg-foreground/10">
+                <AnimatedThemeToggler  />
+                </div>
             </Dock>
         </div>
     )
