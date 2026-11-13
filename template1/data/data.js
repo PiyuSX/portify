@@ -3,7 +3,7 @@ const Data ={
   personal:{
     name: "Piyush Raj",
     username: "PiyusX",
-    dob: "2008-04-18",
+    dob: "2009-04-18",
     role: "Future Engineer",
     location: "Biratnagar, Nepal",
     bio: "I'm Passionate about engineering, with a strong interest in mathematics and web development, while exploring electronics, PCB design, and hardware.",
@@ -31,6 +31,7 @@ const Data ={
         link: "https://codemate.piyushrajbanshi.com.np/",
         github: "github.com",
         technologies: ["React", "Node.js", "Express.js", "MongoDB"],
+        images: ["/home.png", "/projects/codemate2.png"],
     },
     {
         name: "Demo",
@@ -38,7 +39,16 @@ const Data ={
         link: "https://codemate.piyushrajbanshi.com.np/",
         github: "github.com",
         technologies: ["React", "Node.js", "Express.js", "MongoDB"],
+        images: ["/home.png", "/projects/codemate2.png"],
     },
+    {
+      name: "PiPad",
+      description: "A platform to find coding partners and collabotors",
+      link: "https://codemate.piyushrajbanshi.com.np/",
+      github: "github.com",
+      technologies: ["React", "Node.js", "Express.js", "MongoDB"],
+      images: ["/home.png", "/projects/codemate2.png"],
+    }
   ],
   metaData: {
     title: "PiyusX - Portfolio",

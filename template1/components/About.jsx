@@ -10,6 +10,7 @@ const About = () => {
         <p className="text-muted-foreground leading-7">
         {Data.about.bio}
         </p>
+        <div className="border-b my-6"></div>
     </div>
   )
 }
