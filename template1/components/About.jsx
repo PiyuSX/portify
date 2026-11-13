@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div className="flex flex-col gap-4">
         <span className="text-sm ">
-        01 / ABOUT
+        / ABOUT
         </span>
 
         <p className="text-muted-foreground leading-7">

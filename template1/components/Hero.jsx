@@ -3,7 +3,7 @@ import Image from "next/image";
 import AgeCounter from "./AgeCounter";
 import Data from "@/data/data.js";
 import { HyperText } from "./ui/hyper-text";
-
+import PixelText from "./PixelText";
 
 const Hero = () => {
   return (
@@ -25,8 +25,8 @@ const Hero = () => {
       </div>
       <div className="flex flex-col gap-5 mt-10">
       <div>
-        <h1 className="text-5xl font-semibold text-[--foreground-color]">
-          {Data.personal.username}
+        <h1>
+          <PixelText />
         </h1>
       </div>
       <div>
