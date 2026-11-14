@@ -1,19 +1,19 @@
-
 "use client";
 
 import { useEffect, useState } from "react";
 import { GitHubCalendar } from "react-github-calendar";
 
 const GithubActivity = () => {
+  const [mounted, setMounted] = useState(false);
   const [colorScheme, setColorScheme] = useState("light");
 
   useEffect(() => {
+    setMounted(true);
+
     const root = document.documentElement;
 
     const updateTheme = () => {
-      setColorScheme(
-        root.classList.contains("dark") ? "dark" : "light"
-      );
+      setColorScheme(root.classList.contains("dark") ? "dark" : "light");
     };
 
     updateTheme();
@@ -35,24 +35,26 @@ const GithubActivity = () => {
 
   return (
     <section className="w-full py-7">
-      <span className="text-sm ">
-        / Github Activity
-      </span>
+      <span className="text-sm ">/ Github Activity</span>
 
       <div className="mt-5 w-full overflow-x-auto">
-        <GitHubCalendar
-          username="PiyuSX"
-          colorScheme={colorScheme}
-          theme={theme}
-          blockSize={8}
-          blockMargin={4}
-          fontSize={12}
-          showMonthLabels
-          showTotalCount
-          showColorLegend
-          tooltips
-          className="w-full text-muted-foreground [&_svg]:w-full [&_svg]:h-auto [&_text]:fill-current"
-        />
+        {mounted ? (
+          <GitHubCalendar
+            username="PiyuSX"
+            colorScheme={colorScheme}
+            theme={theme}
+            blockSize={8}
+            blockMargin={4}
+            fontSize={12}
+            showMonthLabels
+            showTotalCount
+            showColorLegend
+            tooltips
+            className="w-full text-muted-foreground [&_svg]:w-full [&_svg]:h-auto [&_text]:fill-current"
+          />
+        ) : (
+          <div className="h-28 w-full animate-pulse rounded-md bg-muted" />
+        )}
       </div>
       <div className="border-b my-6"></div>
     </section>
