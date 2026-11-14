@@ -5,7 +5,6 @@ import Data from "@/data/data";
 import Image from "next/image";
 import { ArrowUpRight, Globe } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
-import {InteractiveHoverButton} from "@/components/ui/interactive-hover-button"
 
 const Projects = () => {
   return (
@@ -28,7 +27,7 @@ const Projects = () => {
                 className="relative block aspect-[1.85/1] overflow-hidden bg-muted"
               >
                 <Image
-                  src={project.images[0]}
+                  src={project.image}
                   alt={project.name}
                   fill
                   priority={index < 2}
@@ -95,9 +94,7 @@ const Projects = () => {
             </article>
           );
         })}
-        <div className="flex items-center justify-center">
-            <InteractiveHoverButton>View All Projects</InteractiveHoverButton>
-        </div>
+        
       </div>
       <div className="border-b my-6"></div>
     </section>

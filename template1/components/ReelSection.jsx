@@ -1,11 +1,21 @@
 "use client";
-import Image from "next/image";
 import { FaInstagram } from "react-icons/fa";
 import { ArrowUpRight } from "lucide-react";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 import Data from "@/data/data.js";
-import Script from "next/script";
+
+const getEmbedUrl = (reel, theme) => {
+  const base = reel.split("?")[0].replace(/\/$/, "");
+  return `${base}/embed/captioned/${theme === "dark" ? "?theme=dark" : ""}`;
+};
 
 const ReelSection = () => {
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+
   return (
     <div className="flex flex-col gap-6 py-7">
       <span className="text-sm">/ ME IN MY FREE TIME</span>
@@ -22,26 +32,23 @@ const ReelSection = () => {
 
       <div className="w-full overflow-x-auto snap-x snap-mandatory scrollbar-hide">
         <div className="flex gap-4 w-max">
-          {Data.reels.map((reel, index) => (
-            <div key={index} className="w-[340px] shrink-0 snap-start">
-              <blockquote
-               className="instagram-media"
-               data-instagram-permalink={reel}
-               data-instagram-version="14"
-              >
-                <a href={reel}>View on Instagram</a>
-              </blockquote>
-            </div>
-          ))}
+          {mounted &&
+            Data.reels.map((reel) => (
+              <div key={reel} className="w-[340px] shrink-0 snap-start">
+                <iframe
+                  key={resolvedTheme} // forces reload when theme changes
+                  src={getEmbedUrl(reel, resolvedTheme)}
+                  className="w-full h-[600px] rounded-lg border-0"
+                  allowTransparency
+                  scrolling="no"
+                  loading="lazy"
+                />
+              </div>
+            ))}
         </div>
       </div>
-      <Script
-        src="https://www.instagram.com/embed.js"
-        strategy="lazyOnload"
-        onReady={() => {
-          window.instgrm?.Embeds?.process();
-        }}
-      />
+    <div className="border-b my-6"></div>
+
     </div>
   );
 };
