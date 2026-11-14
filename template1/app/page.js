@@ -5,6 +5,7 @@ import About from "@/components/About";
 import Projects from "@/components/Projects";
 import GithubActivity from "@/components/GithubActivity";
 import TechStack from "@/components/TechStack";
+import ReelSection from "@/components/ReelSection";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <GithubActivity />
       <Projects />
       <TechStack />
+      <ReelSection />
     </main>
     </div>
   )

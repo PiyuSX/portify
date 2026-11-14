@@ -87,6 +87,12 @@ const Data = {
   about: {
     bio: "I'm Piyush, a curious learner from Biratnagar, Nepal, passionate about technology and engineering. I enjoy building projects, experimenting with hardware, and participating in hackathons. I'm always exploring new ideas, learning new skills, and challenging myself to build things from scratch. Currently, I'm working towards pursuing higher education in Germany, with a long-term goal of becoming an engineer.",
   },
+  reels: [
+    "https://www.instagram.com/p/DfetLntsE7k/",
+    "https://www.instagram.com/p/DfetLntsE7k/",
+    "https://www.instagram.com/p/DfetLntsE7k/",
+    "https://www.instagram.com/p/DfetLntsE7k/",
+  ],
 };
 
 export default Data;
