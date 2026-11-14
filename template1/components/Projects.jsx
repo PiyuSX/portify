@@ -5,6 +5,7 @@ import Data from "@/data/data";
 import Image from "next/image";
 import { ArrowUpRight, Globe } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
+import {InteractiveHoverButton} from "@/components/ui/interactive-hover-button"
 
 const Projects = () => {
   return (
@@ -95,9 +96,10 @@ const Projects = () => {
           );
         })}
         <div className="flex items-center justify-center">
-            View All Projects <ArrowUpRight size={17} className="inline-block ml-1" />
+            <InteractiveHoverButton>View All Projects</InteractiveHoverButton>
         </div>
       </div>
+      <div className="border-b my-6"></div>
     </section>
   );
 };

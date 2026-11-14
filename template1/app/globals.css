@@ -42,7 +42,7 @@
 }
 
 .dark {
-  --background-color: #050505;
+  --background-color: #0D0D0D;
   --muted-foreground: #777777;
   --foreground-color: #111;
   --background: oklch(0.145 0 0);

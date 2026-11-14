@@ -3,6 +3,8 @@ import DockNav from "@/components/DockNav";
 import Top from "@/components/Top";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
+import GithubActivity from "@/components/GithubActivity";
+import TechStack from "@/components/TechStack";
 
 export default function Home() {
   return (
@@ -12,7 +14,9 @@ export default function Home() {
       <DockNav />
       <Hero />
       <About />
+      <GithubActivity />
       <Projects />
+      <TechStack />
     </main>
     </div>
   )
