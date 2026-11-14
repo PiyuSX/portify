@@ -1,10 +1,16 @@
-
 "use client";
 
+import { useEffect, useState } from "react";
 import Data from "@/data/data.js";
 import { FlickeringGrid } from "./ui/flickering-grid";
 
 const Footer = () => {
+  const [year, setYear] = useState(null);
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
   return (
     <footer id="contact" className="w-full py-10">
 
@@ -55,7 +61,7 @@ const Footer = () => {
       </div>
 
       <div className="flex justify-between items-center mt-6 text-xs text-muted-foreground">
-        <span>© {new Date().getFullYear()} {Data.personal.username}</span>
+        <span>© {year ?? ""} {Data.personal.username}</span>
         <span>{Data.personal.location}</span>
       </div>
 
